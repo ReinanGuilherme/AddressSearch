@@ -1,6 +1,9 @@
 import styled from 'styled-components'
+import { propsShowListHistoric } from './interface'
 
-export const Container = styled.div`
+export const Container = styled.div<propsShowListHistoric>`
+
+    display: ${props => props.show == 1 ? "" : "none"};
 
     h2 {
         text-align: center;
@@ -12,19 +15,31 @@ export const Container = styled.div`
 
 export const ContainerDisplayPrincipal = styled.div`
 
-    padding: 10px;
     border-bottom: 1px solid #fff;
 
-    display: flex;
-
     &:hover {
-        color: #000;
         background-color: #fff;
-        cursor: pointer;
+        cursor: default;
+
+        button {
+            color: #000;
+            cursor: pointer;
+        }
     }
 
-    svg {
+    button {
+        color: #fff;
         margin-right: 15px;
+        padding: 10px;
+
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20px 1fr;
+
+        p {
+            text-align: left;
+        }
     }
 
 `
