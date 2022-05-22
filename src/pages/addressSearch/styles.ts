@@ -6,6 +6,7 @@ export const Container = styled.div<propsShowListHistoric>`
 
     display: grid;
     grid-template-columns: ${props => props.show == 1 ? "1fr 30vw" : "1fr"};
+    grid-template-rows: 100vh;
 
     @media (max-width: 900px) {
         grid-template-columns: 1fr;
@@ -27,8 +28,9 @@ export const ContainerButton = styled.button<propsShowListHistoric>`
     border-radius: 5px 0 0 5px;
 
     @media (max-width: 900px) {
-        top: ${props => props.show == 1 ? "67vh" : "97vh"};
-        border-radius: 5px 5px 0 0;
-        right: 50vw;
+        position: fixed;
+        top: ${props => props.show == 1 ? "66vh" : "90vh"};
+        border-radius: 50%;
+        right: 10vw;
     }
 `
