@@ -17,7 +17,7 @@ export const ContainerButton = styled.button<propsShowListHistoric>`
 
     position: absolute;
     right: ${props => props.show == 1 ? "30vw" : "0vw"};
-    bottom: 50vh;
+    top: 50vh;
     padding: 5px;
         
     color: #fff;
@@ -27,7 +27,7 @@ export const ContainerButton = styled.button<propsShowListHistoric>`
     border-radius: 5px 0 0 5px;
 
     @media (max-width: 900px) {
-        bottom: ${props => props.show == 1 ? "30vh" : "0vh"};
+        top: ${props => props.show == 1 ? "70vh" : "100vh"};
         border-radius: 5px 5px 0 0;
         right: 50vw;
     }
