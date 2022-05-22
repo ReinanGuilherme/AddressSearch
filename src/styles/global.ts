@@ -31,6 +31,10 @@ export const Global = createGlobalStyle`
         background: transparent;
     }
 
+    //removendo os botões (MAPA e SATELITE)
+    .gmnoprint {
+        display: none;
+    }
     
     //classe para manipular elementos do PLACE AUTOCOMPLETE API
     .pac-container {

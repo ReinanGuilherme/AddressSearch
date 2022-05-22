@@ -2,14 +2,17 @@ import { GoogleMaps } from "../../components/googleMaps";
 import { ListOfHistoric } from "../../components/listHistoric";
 import { HistoricSearchProvider } from "../../hooks/HistoricSearchContext";
 
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { IoIosArrowBack, IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
 import { Container, ContainerButton } from "./styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function AddressSearch() {
 
     const [showListHistoric, setShowListHistoric] = useState(1)
+
+    //capiturando o tamanho do width da tela
+    let screenWidth = window.screen.width
 
     //alterando o estado de exibição da lista de historico
     function changeView() {
@@ -19,6 +22,7 @@ export function AddressSearch() {
             setShowListHistoric(1)
         }
     }
+
 
     return (
         //importando o context ao redor do elemento que irá utilizar seus atributos
@@ -31,7 +35,9 @@ export function AddressSearch() {
                     show={showListHistoric}
                     onClick={changeView}>
                     {/* alterando o icone da direita para esquerda de acordo com a exibição da lista */}
-                    {showListHistoric == 1 ? <IoIosArrowForward /> : <IoIosArrowBack />}
+                    {screenWidth > 900
+                        ? showListHistoric == 1 ? <IoIosArrowForward /> : <IoIosArrowBack />
+                        : showListHistoric == 1 ? <IoIosArrowDown /> : <IoIosArrowUp />}
                 </ContainerButton>
             </Container>
         </HistoricSearchProvider>

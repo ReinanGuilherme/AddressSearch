@@ -9,7 +9,7 @@ export function GoogleMaps() {
 
     const [map, setMap] = useState<google.maps.Map>()
     const [searchBox, setSearchBox] = useState<google.maps.places.SearchBox>()
-    const [positionLatAndLng, setPositionLatAndLng] = useState<any[]>([{ lat: -10.8472104, lng: -37.0645643 }])
+    const [positionLatAndLng, setPositionLatAndLng] = useState<any[]>([{ lat: -10.988865, lng: -37.0481787 }])
 
     //hook responsavel por armazenar o historico de pesquisa
     const HistoricSearch = useContext(HistoricSearchContext)

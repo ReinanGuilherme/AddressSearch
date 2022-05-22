@@ -29,6 +29,11 @@ export const Container = styled.div`
         color: var(--colorWhite);
         font-size: 16px;
     }  
+
+    @media (max-width: 900px) {
+
+        margin: 5px auto 25px auto;
+    }
 `
 export const ContainerSVG = styled.span`
 
