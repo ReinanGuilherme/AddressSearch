@@ -27,7 +27,7 @@ export const ContainerButton = styled.button<propsShowListHistoric>`
     border-radius: 5px 0 0 5px;
 
     @media (max-width: 900px) {
-        top: ${props => props.show == 1 ? "70vh" : "100vh"};
+        top: ${props => props.show == 1 ? "67vh" : "97vh"};
         border-radius: 5px 5px 0 0;
         right: 50vw;
     }
